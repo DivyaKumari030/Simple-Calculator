@@ -1,5 +1,4 @@
 package org.example;
-import org.example.JOptionPaneTestHelper;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -7,7 +6,17 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 public class Main {
 public static class CalculatorGUI extends JFrame implements ActionListener {
-    public JTextField textField;
+    //public JTextField textField;
+    private static JTextField textField;
+    // ... existing code ...
+
+    static {
+        textField = new JTextField();
+        textField.setPreferredSize(new Dimension(280, 40));
+        textField.setFont(new Font("Arial", Font.PLAIN, 20));
+        textField.setHorizontalAlignment(JTextField.RIGHT);
+        textField.setEditable(false);
+    }
     public JButton[] numberButtons;
     public JButton[] operatorButtons;
     public JButton equalsButton;
@@ -137,7 +146,6 @@ public static class CalculatorGUI extends JFrame implements ActionListener {
             textField.setText("");
         }
     }
-
     public static void main(String[] args) {
                 SwingUtilities.invokeLater(() -> {
             CalculatorGUI calculator = new CalculatorGUI();

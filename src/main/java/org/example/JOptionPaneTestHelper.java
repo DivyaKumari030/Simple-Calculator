@@ -1,7 +1,11 @@
 package org.example;
-import javax.swing.*;
+
 public class JOptionPaneTestHelper {
     private static String message;
+
+    private JOptionPaneTestHelper() {
+        // Private constructor to hide the implicit public one
+    }
 
     public static String showMessageDialogCalledWith() {
         return message;
@@ -12,4 +16,5 @@ public class JOptionPaneTestHelper {
         return 0;
     }
 }
+
 
