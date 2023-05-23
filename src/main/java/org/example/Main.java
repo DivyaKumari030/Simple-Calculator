@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 public class Main {
 public static class CalculatorGUI extends JFrame implements ActionListener {
-    //public JTextField textField;
     private static JTextField textField;
     // ... existing code ...
 
